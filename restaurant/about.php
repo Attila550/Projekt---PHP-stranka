@@ -146,6 +146,9 @@
 
         </main>
 
+        <?php
+    include_once "parts/footer.php";
+    ?>
     
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>

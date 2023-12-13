@@ -1,4 +1,4 @@
-<?php 
+<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once 'lib/DB.php';
 $dbInstance = new \restaurant\lib\DB();
 
-$restaurantItems = $dbInstance -> getItems();
+$restaurantItems = $dbInstance->getItems();
 ?>
 
 <!DOCTYPE html>
@@ -40,12 +40,10 @@ $restaurantItems = $dbInstance -> getItems();
     <?php
     include_once "parts/header.php";
 
-    if(!isset($common)) {
+    if (!isset($common)) {
         $common = new stdClass();
     }
     ?>
-
-    
 
     <main>
 
@@ -179,26 +177,26 @@ $restaurantItems = $dbInstance -> getItems();
                     <div class="col-12">
                         <h2 class="text-center mb-lg-5 mb-4">Special Menus</h2>
                     </div>
-                    <?php foreach($restaurantItems as $item): ?>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="menu-thumb">
-                            <div class="menu-image-wrap">
-                                <img src="<?php echo $item['img'];  ?>" class="img-fluid menu-image" alt="">
-                            </div>
+                    <?php foreach ($restaurantItems as $item) : ?>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="menu-thumb">
+                                <div class="menu-image-wrap">
+                                    <img src="<?php echo $item['img'];  ?>" class="img-fluid menu-image" alt="">
+                                </div>
 
-                            <div class="menu-info d-flex flex-wrap align-items-center">
-                                <h4 class="mb-0"><?php echo $item['title'];  ?></h4>
+                                <div class="menu-info d-flex flex-wrap align-items-center">
+                                    <h4 class="mb-0"><?php echo $item['title'];  ?></h4>
 
-                                <span class="price-tag bg-white shadow-lg ms-4"><small>$</small><?php echo $item['price'];  ?></span>
+                                    <span class="price-tag bg-white shadow-lg ms-4"><small>$</small><?php echo $item['price'];  ?></span>
 
-                                <div class="d-flex flex-wrap align-items-center w-100 mt-2">
-                                    <h6 class="reviews-text mb-0 me-3"><?php echo $item['rating'];  ?>/5</h6>
+                                    <div class="d-flex flex-wrap align-items-center w-100 mt-2">
+                                        <h6 class="reviews-text mb-0 me-3"><?php echo $item['rating'];  ?>/5</h6>
 
-                                    <p class="reviews-text mb-0 ms-4"><?php echo $item['reviews'];  ?> Reviews</p>
+                                        <p class="reviews-text mb-0 ms-4"><?php echo $item['reviews'];  ?> Reviews</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <?php endforeach; ?>
 
                 </div>

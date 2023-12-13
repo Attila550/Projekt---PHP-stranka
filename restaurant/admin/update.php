@@ -48,7 +48,7 @@ $item = $db->getItemsByID($_GET['id']);
 <section class="col-lg-8 col-12 ms-auto">
     <div class="col-lg-6 col-8">
         <form class="custom-form contact-form row" action="update-item.php" method="post" role="form">
-
+        <p style="text-align:center">ID</p>
         <input type="text" name="id" value="<?php echo isset($item['id']) ? $item['id'] : ''; ?>">
 
         <div class="col-lg-6 col-6">

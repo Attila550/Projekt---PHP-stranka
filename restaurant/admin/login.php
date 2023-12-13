@@ -45,10 +45,10 @@ if(isset($_GET['error'])) {
     <div class="col-lg-6 col-8 mx-auto">
         <form class="custom-form contact-form row" action="" method="post" role="form">
             <div class="col-lg-6 col-12">
-                <label for="username" class="form-label">Username</label>
+                <label for="" class="form-label">Username</label>
                 <input type="text" name="username" value="" placeholder="Username" class="form-control" required>
                 
-                <label for="password" class="form-label">Password</label>
+                <label for="" class="form-label">Password</label>
                 <input type="password" name="password" value="" placeholder="Password" class="form-control" required>
 
                 <input class="form-control" type="submit" name="login" value="Login">
